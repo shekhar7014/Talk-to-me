@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine 💖</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffd6e8, #ffeef5);
+    font-family: Arial, sans-serif;
+  }
+
+  .box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  h1 {
+    color: #e91e63;
+    margin-bottom: 30px;
+  }
+
+  button {
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  #yes {
+    background: #e91e63;
+    color: white;
+  }
+
+  #no {
+    background: #ddd;
+    position: relative;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>❤️ Anushka ❤️<br>Will you be my Valentine?</h1>
+  <button id="yes" onclick="yesClick()">Yes!</button>
+  <button id="no" onmouseover="moveNo()">No</button>
+</div>
+
+<script>
+  function yesClick() {
+    document.body.innerHTML =
+      "<h1 style='color:#e91e63;'>Yay! 💖🥰</h1>";
+  }
+
+  function moveNo() {
+    const btn = document.getElementById("no");
+    btn.style.position = "absolute";
+    btn.style.left = Math.random() * 80 + "%";
+    btn.style.top = Math.random() * 80 + "%";
+  }
+</script>
+
+</body>
+</html>
