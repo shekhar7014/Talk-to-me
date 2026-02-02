@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exam Question 💬</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #dff9fb, #c7ecee);
+    font-family: Arial, sans-serif;
+  }
+
+  .box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  h1 {
+    color: #130f40;
+    margin-bottom: 30px;
+  }
+
+  button {
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  #yes {
+    background: #27ae60;
+    color: white;
+  }
+
+  #no {
+    background: #f1f2f6;
+    position: relative;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>💙 Srishti 💙<br>How was your exam?</h1>
+  <button id="yes" onclick="yesClick()">Good 😊</button>
+  <button id="no" onmouseover="moveNo()">Not Good 😅</button>
+</div>
+
+<script>
+  function yesClick() {
+    document.body.innerHTML =
+      "<h1 style='color:#27ae60; text-align:center;'>I knew it! 😄✨</h1>";
+  }
+
+  function moveNo() {
+    const btn = document.getElementById("no");
+    btn.style.position = "absolute";
+    btn.style.left = Math.random() * 80 + "%";
+    btn.style.top = Math.random() * 80 + "%";
+  }
+</script>
+
+</body>
+</html>
